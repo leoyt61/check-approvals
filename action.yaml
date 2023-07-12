@@ -1,0 +1,12 @@
+name: Check Pull Request Commits Authors
+description: Validate pull request commits authors by email domain
+inputs:
+  MIN_APPROVALS_NEEDED:  
+    description: 'Minimum approvals needed'
+    required: true
+outputs:
+  APPROVED: 
+    description: 'Whether the PR has a reached the minimum approvals'
+runs:
+  using: "node16"
+  main: "dist/bundle.js"
